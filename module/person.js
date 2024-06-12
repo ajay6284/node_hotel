@@ -1,5 +1,5 @@
 const mongoose= require('mongoose');
-
+//Person schem
 const personSchema= new mongoose.Schema({
 
     name: {
