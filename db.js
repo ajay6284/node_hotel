@@ -1,15 +1,13 @@
 const mongoose= require('mongoose');
+require('dotenv').config();
 
-const mongosURL='mongodb://localhost:27017/restorent';
+//const MONGODB_URL='mongodb://localhost:27017/restorent';
 
-mongoose.connect(mongosURL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-}
+const MONGODB_URL=process.env.MONGO_URL;
 
-)
+mongoose.connect(MONGODB_URL);
 
-const db= mongoose.connection;
+const db = mongoose.connection;
 
 db.on('connected', () =>{
     console.log("connected to mongoDB server");

@@ -39,6 +39,9 @@ const Person = require('./module/person');
 const bodyParser = require('body-parser'); 
 app.use(bodyParser.json());
 const Menu=require('./module/menu');
+require('dotenv').config();
+const PORT  = process.env.NEW_PORT || 3000;
+
 
 
 
@@ -65,5 +68,5 @@ app.get('/chicken', function (req, res) {
   app.use('/person', personroutes);
   
 
-app.listen(3000);
+app.listen( PORT);
 

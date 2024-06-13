@@ -15,7 +15,7 @@ const personSchema= new mongoose.Schema({
 
     },
 
-    Salary: {
+       Salary: {
         type:Number,
         required: true
     },
